@@ -8,7 +8,11 @@ export const createUser = async ({userId, username, name, email, image}: UserTyp
         await connectToDB();
         const newUser = await User.create({id:userId, username: username?.toLowerCase(), name, email, image});
         return newUser;
-    } catch (error : any) {
-        throw new Error(`Failed to create user: ${error.message}`)
+    } catch (err) {
+        if (err instanceof Error) {
+            throw new Error(`Failed to create user: ${err.message}`);
+        } else {
+            throw new Error('Failed to create user: Unknown error');
+        }
     }
 }

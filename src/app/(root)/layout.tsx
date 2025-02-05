@@ -6,7 +6,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import TopBar from "../../../components/share/TopBar";
 import LeftSibar from "../../../components/share/LeftSibar";
 import RightSibar from "../../../components/share/RightSibar";
-import BottonBar from "../../../components/share/BottonBar";
+
 
 export const metadata: Metadata = {
   title: "Create Socioal App",

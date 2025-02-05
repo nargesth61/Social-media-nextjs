@@ -3,7 +3,7 @@ import { sidebarLinks } from "../../constants"
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@clerk/nextjs';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 const LeftSideBar = () => {
     const pathname = usePathname()
